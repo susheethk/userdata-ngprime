@@ -1,0 +1,42 @@
+<div class="h-[65px] w-full fixed top-0 border-b border-gray-300 z-50 bg-white">
+    <p-menubar>
+        <ng-template pTemplate="start">
+            <div class="flex items-center">
+                <a href="#" class="flex items-center">
+                    <span class="text-lg text-yellow-700 font-bold pl-5">Rohile</span>
+                    <span class="text-gray-900 font-bold text-xl pl-1">CRM</span>
+                </a>
+                <div class="flex items-center ml-4 relative left-32">
+                    <i class="pi pi-search absolute mr-4 left-2 text-[13px] font-semibold flex"></i>
+                    <input type="text" placeholder="Search" class="w-96 p-2 border rounded-md pl-7 text-[15px] ">
+                </div>
+            </div>
+        </ng-template>
+
+        <!-- <ng-template pTemplate="center">
+            <div class="flex justify-center items-center">
+                <span class="flex items-center">
+                    <i class="pi pi-search"></i>
+                    <input type="text" placeholder="Search" class="w-40">
+                </span>
+            </div>
+        </ng-template> -->
+
+        <ng-template pTemplate="end">
+            <div class="flex items-center space-x-6">
+                <img src="https://img.icons8.com/?size=100&id=2SMMY5eyQZOE&format=png&color=000000" alt="bell"
+                    class="h-[20px] w-[20px]">
+                <div class="flex items-center">
+                    <img src="https://img.icons8.com/?size=100&id=8H3RoQrvhfs3&format=png&color=000000" alt="flag"
+                        class="w-[20px] h-[20px] mr-3">
+                    <p-dropdown [options]="languages" [(ngModel)]="selectedLanguage"></p-dropdown>
+                </div>
+                <div class="flex items-center">
+                    <img src="https://images.pexels.com/photos/103123/pexels-photo-103123.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="Profile Pic" class="rounded-full h-8 w-8">
+                    <p-dropdown [options]="userOptions" [(ngModel)]="selectedUser" class="pl-2 p-0"></p-dropdown>
+                </div>
+            </div>
+        </ng-template>
+    </p-menubar>
+</div>

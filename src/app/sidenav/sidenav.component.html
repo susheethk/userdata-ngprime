@@ -1,0 +1,168 @@
+<div position="left" class="border-r h-[679px] w-[250px] bg-white fixed top-[66px]">
+    <div class="p-3 border-b">
+        <ul class="grid gap-1">
+            <li>
+                <button 
+                    pButton pRipple 
+                    class="p-button-text w-full text-left left-2 p-1 flex items-center space-x-2 rounded-md group"
+                    [ngClass]="{'bg-[rgb(157,136,109)] text-white': activeButton === 'dashboard',
+                        'hover:bg-[rgb(157,136,109)] hover:text-white': activeButton !== 'dashboard'
+                    }"
+                    (click)="setActiveButton('dashboard')">
+                    <i class="pi pi-microsoft"></i>
+                    <span class="text-sm">Dashboard</span>
+                </button>
+            </li>
+            
+            <!-- this achived by css -->
+            <!-- <li>
+                <button pButton pRipple class="p-button-text w-full text-left left-2 hover:bg-[rgb(157,136,109)] hover:text-white p-1 flex items-center space-x-2 rounded-md group focus:bg-[rgb(157,136,109)] focus:text-white">
+                    <i class="pi pi-check-square"></i>
+                    <span class="text-sm">Enquiries</span>
+                </button>
+            </li> -->
+            <li>
+                <button 
+                    pButton pRipple 
+                    class="p-button-text w-full text-left left-2 p-1 flex items-center space-x-2 rounded-md group"
+                    [ngClass]="{'bg-[rgb(157,136,109)] text-white': activeButton === 'enquiries',
+                        'hover:bg-[rgb(157,136,109)] hover:text-white': activeButton !== 'enquiries'
+                    }"
+                    (click)="setActiveButton('dashboard')">
+                    <i class="pi pi-check-square"></i>
+                    <span class="text-sm">Enquiries</span>
+                </button>
+            </li>
+
+            <li>
+                <button pButton pRipple class="p-button-text w-full text-left left-2 p-1 flex items-center space-x-2 rounded-md group"
+                [ngClass]="{'bg-[rgb(157,136,109)] text-white': activeButton === 'marketing',
+                    'hover:bg-[rgb(157,136,109)] hover:text-white': activeButton !== 'marketing'
+                }"
+                (click)="setActiveButton('marketing')">
+                    <i class="pi pi-shop"></i>
+                    <span class="text-sm">Marketing</span>
+                </button>
+            </li>
+            <li>
+                <button pButton pRipple class="p-button-text w-full text-left left-2 p-1 flex items-center space-x-2 rounded-md group"
+                [ngClass]="{'bg-[rgb(157,136,109)] text-white': activeButton === 'leads',
+                    'hover:bg-[rgb(157,136,109)] hover:text-white': activeButton !== 'leads'
+                }"
+                (click)="setActiveButton('leads')">
+                    <i class="pi pi-users"></i>
+                    <span class="text-sm">Leads</span>
+                </button>
+            </li>
+        </ul>
+    </div>
+    <div class="border-b p-3">
+        <ul class="grid gap-1">
+            <li>
+                <button pButton pRipple class="p-button-text w-full text-left left-2 p-1 flex items-center space-x-2 rounded-md group"
+                [ngClass]="{'bg-[rgb(157,136,109)] text-white': activeButton === 'customers',
+                    'hover:bg-[rgb(157,136,109)] hover:text-white': activeButton !== 'customers'
+                }"
+                (click)="setActiveButton('customers')">
+                    <i class="pi pi-user"></i>
+                    <span class="text-sm">Customers</span>
+                </button>
+            </li>
+            <li>
+                <button pButton pRipple class="p-button-text w-full text-left left-2 p-1 flex items-center space-x-2 rounded-md group"
+                [ngClass]="{'bg-[rgb(157,136,109)] text-white': activeButton === 'task',
+                    'hover:bg-[rgb(157,136,109)] hover:text-white': activeButton !== 'task'
+                }"
+                (click)="setActiveButton('task')">
+                    <i class="pi pi-id-card"></i>
+                    <span class="text-sm">Tasks</span>
+                </button>
+            </li>
+            <li>
+                <button pButton pRipple class="p-button-text w-full text-left left-2 p-1 flex items-center space-x-2 rounded-md group"
+                [ngClass]="{'bg-[rgb(157,136,109)] text-white': activeButton === 'fields',
+                    'hover:bg-[rgb(157,136,109)] hover:text-white': activeButton !== 'fields'
+                }"
+                (click)="setActiveButton('fields')">
+                    <i class="pi pi-spin pi-cog"></i>
+                    <span class="text-sm">Fields Tasks</span>
+                </button>
+            </li>
+            <li>
+                <button pButton pRipple class="p-button-text w-full text-left left-2 p-1 flex items-center space-x-2 rounded-md group"
+                [ngClass]="{'bg-[rgb(157,136,109)] text-white': activeButton === 'quotes',
+                    'hover:bg-[rgb(157,136,109)] hover:text-white': activeButton!== 'quotes'
+                }"
+                (click)="setActiveButton('quotes')">
+                    <i class="pi pi-comments"></i>
+                    <span class="text-sm">Quotes</span>
+                </button>
+            </li>
+            <li>
+                <button pButton pRipple class="p-button-text w-full text-left left-2 p-1 flex items-center space-x-2 rounded-md group"
+                [ngClass]="{'bg-[rgb(157,136,109)] text-white': activeButton === 'inventory',
+                    'hover:bg-[rgb(157,136,109)] hover:text-white': activeButton!== 'inventory'
+                }"
+                (click)="setActiveButton('inventory')">
+                    <i class="pi pi-box"></i>
+                    <span class="text-sm">Inventory</span>
+                </button>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="border-b p-3">
+        <ul class="grid gap-1">
+            <li>
+                <button pButton pRipple class="p-button-text w-full text-left left-2 p-1 flex items-center space-x-2 rounded-md group"
+                [ngClass]="{'bg-[rgb(157,136,109)] text-white': activeButton === 'attendance',
+                    'hover:bg-[rgb(157,136,109)] hover:text-white': activeButton!== 'attendance'
+                }"
+                (click)="setActiveButton('attendance')">
+                    <i class="pi pi-address-book"></i>
+                    <span class="text-sm">Attendance</span>
+                </button>
+            </li>
+            <li>
+                <button pButton pRipple class="p-button-text w-full text-left left-2 p-1 flex items-center space-x-2 rounded-md group"
+                [ngClass]="{'bg-[rgb(157,136,109)] text-white': activeButton === 'organization',
+                    'hover:bg-[rgb(157,136,109)] hover:text-white': activeButton!== 'organization'
+                }"
+                (click)="setActiveButton('organization')">
+                    <i class="pi pi-sitemap"></i>
+                    <span class="text-sm">Organization</span>
+                </button>
+            </li>
+
+        </ul>
+
+    </div>
+
+    
+    <div class=" p-3">
+        <ul class="grid gap-1">
+            <li>
+                <button pButton pRipple class="p-button-text w-full text-left left-2 p-1 flex items-center space-x-2 rounded-md group"
+                [ngClass]="{'bg-[rgb(157,136,109)] text-white': activeButton === 'reports',
+                    'hover:bg-[rgb(157,136,109)] hover:text-white': activeButton!== 'reports'
+                }"
+                (click)="setActiveButton('reports')">
+                    <i class="pi pi-clipboard"></i>
+                    <span class="text-sm">Reports</span>
+                </button>
+            </li>
+            <li>
+                <button pButton pRipple class="p-button-text w-full text-left left-2 p-1 flex items-center space-x-2 rounded-md group"
+                [ngClass]="{'bg-[rgb(157,136,109)] text-white': activeButton === 'admin',
+                    'hover:bg-[rgb(157,136,109)] hover:text-white': activeButton!== 'admin'
+                }"
+                (click)="setActiveButton('admin')">
+                    <i class="pi pi-shield"></i>
+                    <span class="text-sm">Admin</span>
+                </button>
+            </li>
+        </ul>
+    </div>
+
+</div>

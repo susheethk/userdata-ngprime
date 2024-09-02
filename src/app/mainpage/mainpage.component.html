@@ -1,0 +1,159 @@
+
+<div class="relative left-[250px] top-16 m-1 flex p-1 rounded-md  grid-cols-3 gap-14">
+
+    <div class="bg-white w-80 h-32 m-1 rounded-md flex flex-col p-3 relative transition-transform transform hover:scale-105"
+      style="box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);">
+      <span>In Progress</span>
+      <span class="text-3xl font-semibold py-3">150</span>
+      <div>
+        <i class="pi pi-chart-line text-green-500 font-semibold">
+          <span class="ml-2">8.5%</span>
+        </i>
+        Up From Yesterday
+      </div>
+      <div
+        class="absolute top-6 right-11 text-4xl bg-orange-200 rounded-2xl w-12 h-12 flex items-center justify-center p-2">
+        <i class="pi pi-inbox text-orange-600"></i>
+      </div>
+    </div>
+
+    <div class="bg-white w-80 h-32 m-1 rounded-md flex flex-col p-3 relative transition-transform transform hover:scale-105"
+      style="box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);">
+      <span>Won</span>
+      <span class="text-3xl font-semibold py-3">120</span>
+      <div>
+        <i class="pi pi-chart-line text-green-500 font-semibold">
+          <span class="m-2">1.3%</span>
+        </i>
+        Up From Past Week
+      </div>
+      <div
+        class="absolute top-6 right-11 text-4xl bg-rose-200 rounded-2xl w-12 h-12 flex items-center justify-center p-2">
+        <i class="pi pi-receipt text-rose-600"></i>
+      </div>
+    </div>
+
+    <div class="bg-white w-80 h-32 m-1 rounded-md flex flex-col p-3 relative transition-transform transform hover:scale-105"
+      style="box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);">
+      <span>Disqualified</span>
+      <span class="text-3xl font-semibold py-3">30</span>
+      <div>
+        <i class="pi pi-arrow-down-right text-rose-600 font-semibold">
+          <span class="ml-2">4.3%</span>
+        </i>
+        Down From Yesterday
+      </div>
+      <div
+        class="absolute top-6 right-11 text-4xl bg-blue-200 rounded-2xl w-12 h-12 flex items-center justify-center p-2">
+        <i class="pi pi-file-arrow-up text-blue-950"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="relative flex left-[250px] top-[60px] m-2 p-1 gap-14 border-b bg-white h-[340px] rounded-md w-[1095px]"
+    style="box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);">
+
+    <div class="bg-white h-16 p-2 flex items-center justify-between rounded-md  relative" style="width: 515px;">
+      <span class="font-bold">Task Status</span>
+      <div div class="flex items-center space-x-2">
+        <!-- <button
+          class=" text-black hover:bg-[rgb(157,136,109)] hover:text-white border border-gray-300 rounded-md px-2 py-1"><i
+            class="bi bi-plus"></i>Create a New Task</button> -->
+
+            <p-button 
+            label="Create a New Task" 
+            icon="pi pi-plus" 
+            styleClass="text-black hover:bg-[rgb(157,136,109)] hover:text-white border border-gray-300 rounded-md px-2 py-1"> 
+            </p-button>          
+
+
+        <select class="bg-white rounded-md px-2 py-1 border border-gray-300">
+          <option value="to">Today</option>
+          <option value="tm">Tomorrow</option>
+          <option value="ye">Yesterday</option>
+        </select>
+      </div>
+
+
+      <div class="bg-white h-64 absolute top-16 left-0 my-2 rounded-md "
+        style="width: 515px; box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);">
+        
+        <p-chart type="bar" [data]="taskStatusData" [options]="chartOptions" width="500px" height="250px"></p-chart>
+      </div>
+
+
+
+    </div>
+
+
+    <div class="bg-white h-16 p-2 flex items-center justify-between rounded-md relative" style="width: 515px;">
+      <span class="font-bold">Statistics</span>
+      <div class="flex items-center space-x-2">
+        <select class="bg-white rounded-md px-2 py-1 border border-gray-300">
+          <option value="to">Today</option>
+          <option value="tm">Tomorrow</option>
+          <option value="ye">Yesterday</option>
+        </select>
+      </div>
+
+      <div class="bg-white h-64 absolute top-16 left-0 my-2 rounded-md "
+        style="width: 515px; height: 255px; box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);">
+        <p-chart type="doughnut" [data]="statisticsData" [options]="chartOptions" width="500px" height="250px"></p-chart>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="flex flex-col p-2 relative left-[245px]  my-6 bg-white m-3 rounded-md "
+    style="box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24); width: 1090px; top: 40px; height: 470px">
+    <div>
+      <span class="text-lg font-semibold">Agent Task</span>
+    </div>
+    <div class="flex items-center justify-between mt-2">
+      <input type="text" placeholder="Search for Agents" class="px-2 py-1 w-96 h-8  border border-gray-300 rounded-md ">
+      <div class="flex space-x-4">
+        <button
+          class="px-2 py-1 h-8 text-center text-[rgb(157,136,109)] rounded-md hover:bg-[rgb(157,136,109)] border border-gray-300 hover:text-white"><i
+            class="pi pi-filter px-1 pr-1"></i>Filter</button>
+
+        <button
+          class="px-2 py-1 h-8 text-center text-[rgb(157,136,109)] rounded-md hover:hover:bg-[rgb(157,136,109)] border border-gray-300 hover:text-white"><i
+            class="pi pi-download px-1 mr-1"></i>Import
+          Leads</button>
+
+        <button
+          class="px-2 py-1 h-8 text-center text-[rgb(157,136,109)] rounded-md hover:bg-[rgb(157,136,109)] hover:text-white border border-gray-300"><i
+            class="pi pi-plus mr-1"></i>Create
+          Leads</button>
+      </div>
+    </div>
+
+    <div class="mat-elevation-z8  relative left=[200px]  bg-white border-t-slate-600" style="width: 1090px; top: 20px;">
+
+      <p-table [value]="products" >
+  
+          <ng-template pTemplate="header">
+              <tr>
+                  <th style="width: 4rem"><p-tableHeaderCheckbox /></th>
+                  <th>Code</th>
+                  <th>Name</th>
+                  <th>Category</th>
+                  <th>Quantity</th>
+              </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-product>
+              <tr>
+                  <td>
+                      <p-tableCheckbox [value]="product" />
+                  </td>
+                  <td>{{product.code}}</td>
+                  <td>{{product.name}}</td>
+                  <td>{{product.category}}</td>
+                  <td>{{product.quantity}}</td>
+              </tr>
+          </ng-template>
+  </p-table>
+  
+    </div>
+
+  </div>
