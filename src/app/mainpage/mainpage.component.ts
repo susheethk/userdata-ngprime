@@ -6,13 +6,19 @@ import { CommonModule } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
 import { DropdownModule } from 'primeng/dropdown';
 import { FormsModule } from '@angular/forms';
+import { CheckboxModule } from 'primeng/checkbox';
 
-// Define the Product interface
+
 interface Product {
   code: string;
   name: string;
   category: string;
-  quantity: number;
+  company: string;
+  email: string;
+  owner: string;
+  source: string;
+  status: string;
+  action: string;
 }
 
 @Component({
@@ -25,10 +31,11 @@ interface Product {
     CommonModule,
     ButtonModule,
     DropdownModule,
-    FormsModule
+    FormsModule,
+    CheckboxModule
   ],
   templateUrl: './mainpage.component.html',
-  styleUrls: ['./mainpage.component.css'] // Corrected property name
+  styleUrls: ['./mainpage.component.css'] 
 })
 export class MainpageComponent implements OnInit {
 
@@ -38,13 +45,13 @@ export class MainpageComponent implements OnInit {
     { label: 'Yesterday', value: 'ye' }
   ];
 
-  selectedValue: string = 'to';  
+  selectedValue: string = 'to';
 
   taskStatusData: any;
   statisticsData: any;
   chartOptions: any;
 
-  products: Product[] = []; // Array to hold product data
+  products: Product[] = []; 
 
   ngOnInit() {
     this.taskStatusData = {
@@ -69,17 +76,45 @@ export class MainpageComponent implements OnInit {
     };
 
     this.chartOptions = {
-      responsive: false,
+      responsive: true,
       maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          position: 'right',
+          align: 'center',
+          labels: {
+            boxWidth: 10, 
+            padding: 15,
+            usePointStyle: true, 
+          }
+        }
+      },
+      layout: {
+        padding: {
+          left: 0, 
+          right: 0, 
+          top: 0, 
+          bottom: 0 
+        }
+      }
     };
+    
 
-    // Initialize products data
+    // this.chartOptions = {
+    //   responsive: true,
+    //   maintainAspectRatio: false,
+    // };
+
     this.products = [
-      { code: 'P1001', name: 'Product 1', category: 'Category 1', quantity: 50 },
-      { code: 'P1002', name: 'Product 2', category: 'Category 2', quantity: 30 },
-      { code: 'P1003', name: 'Product 3', category: 'Category 3', quantity: 20 },
-      // Add more products as needed
-    ];
-  }
-
+      { code: '#5000', name: 'Henry Cavil', category: 'Person', company: 'Like Coperation', email: '123clooab@email.com', owner: 'Jane smith', source: 'instagram.com/', status: 'Completed', action: 'Done' },
+      { code: '#5000', name: 'Henry Cavil', category: 'Person', company: 'Like Coperation', email: '123clooab@email.com', owner: 'Jane smith', source: 'instagram.com/', status: 'Completed', action: 'Done' },
+      { code: '#5000', name: 'Henry Cavil', category: 'Person', company: 'Like Coperation', email: '123clooab@email.com', owner: 'Jane smith', source: 'instagram.com/', status: 'Completed', action: 'Done' },
+      { code: '#5000', name: 'Henry Cavil', category: 'Person', company: 'Like Coperation', email: '123clooab@email.com', owner: 'Jane smith', source: 'instagram.com/', status: 'Completed', action: 'Done' },
+      { code: '#5000', name: 'Henry Cavil', category: 'Person', company: 'Like Coperation', email: '123clooab@email.com', owner: 'Jane smith', source: 'instagram.com/', status: 'Completed', action: 'Done' },
+      { code: '#5000', name: 'Henry Cavil', category: 'Person', company: 'Like Coperation', email: '123clooab@email.com', owner: 'Jane smith', source: 'instagram.com/', status: 'Completed', action: 'Done' },
+      { code: '#5000', name: 'Henry Cavil', category: 'Person', company: 'Like Coperation', email: '123clooab@email.com', owner: 'Jane smith', source: 'instagram.com/', status: 'Completed', action: 'Done' },
+      { code: '#5000', name: 'Henry Cavil', category: 'Person', company: 'Like Coperation', email: '123clooab@email.com', owner: 'Jane smith', source: 'instagram.com/', status: 'Completed', action: 'Done' },
+      { code: '#5000', name: 'Henry Cavil', category: 'Person', company: 'Like Coperation', email: '123clooab@email.com', owner: 'Jane smith', source: 'instagram.com/', status: 'Completed', action: 'Done' },
+    ]
+}
 }

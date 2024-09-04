@@ -1,0 +1,70 @@
+<div class="flex flex-col p-2 relative left-60  my-6 bg-white m-3 rounded-md"
+    style="width: 1105px; top: 45px; height: 575px; box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);">
+
+    <div>
+        <span class="text-lg font-semibold">Activity/Tasks</span>
+    </div>
+    <div class="flex items-center justify-between mt-2">
+        <div class="flex items-center">
+
+            <input type="text" placeholder="Search for Agents"
+                class="px-1 py-1 w-80 h-8  border border-gray-300 rounded-md mx-4">
+
+            <p-button
+                class="px-2 py-1 h-8 text-center text-gray-400 rounded-md hover:bg-[rgb(157,136,109)] border border-gray-300 hover:text-white">Filter
+                Options<i class="pi pi-filter text-[10px] px-2"></i></p-button>
+
+        </div>
+        <div class="flex space-x-4">
+            <p-button
+                class="px-1 py-1 h-8 text-center text-gray-400 rounded-md hover:bg-[rgb(157,136,109)] border border-gray-300 hover:text-white"><i
+                    class="pi pi-plus px-1 text-[10px]"></i>Upload Activities</p-button>
+
+            <p-button
+                class="px-1 py-1 h-8 text-center text-gray-400 rounded-md hover:hover:bg-[rgb(157,136,109)] border border-gray-300 hover:text-white"><i
+                    class="pi pi-plus px-1 text-[10px]"></i>Create Bulk Task</p-button>
+
+            <p-button
+                class="px-1 py-1 h-8 text-center text-gray-400 rounded-md hover:bg-[rgb(157,136,109)] hover:text-white border border-gray-300 flex justify-center items-center"><i
+                    class="pi pi-plus px-1 text-[10px]"></i>Create
+                Activity</p-button>
+        </div>
+    </div>
+
+    <div class="mat-elevation-z8  relative left=[200px]  bg-white border-t-slate-600" style="width: 1090px; top: 20px;">
+        <p-table [value]="products" [paginator]="true" [rows]="10" [rowsPerPageOptions]="[5, 10, 20]">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th class="bg-cyan-100"><p-tableHeaderCheckbox class="border-gray-200 rounded"/></th>
+                    <th class="bg-cyan-100 h-16">TASK I'd</th>
+                    <th class="bg-cyan-100 h-16">LEAD TYPE</th>
+                    <th class="bg-cyan-100 h-16">SUBJECT</th>
+                    <th class="bg-cyan-100 h-16">DUE DATE</th>
+                    <th class="bg-cyan-100 h-16">
+                        <div class="flex items-center">
+                          <p-tableHeaderCheckbox class="mr-2 border-gray-200 rounded" /> 
+                          <span>Follow Up</span>
+                        </div>
+                      </th>               
+                    <th class="bg-cyan-100 h-16">STATUS</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-product>
+                <tr [ngClass]="{'bg-rose-50': product.owner === 'Completed'}">
+                    <td><p-tableCheckbox [value]="product" class="border border-gray-200 rounded" /></td>
+                    <td>{{product.code}}</td>
+                    <td>{{product.name}}</td>
+                    <td>{{product.category}}</td>
+                    <td>{{product.company}}</td>
+                    <td>
+                        <div class="flex items-center">
+                          <p-tableHeaderCheckbox class="mr-2 border-gray-200 rounded"/>
+                          <span>{{product.email}}</span>
+                        </div>
+                      </td>
+                      <td [ngClass]="{'bg-green-100 text-green-600': product.owner === 'Completed','text-red-600': product.owner === 'Disqualified'}">{{product.owner}}</td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+</div>
