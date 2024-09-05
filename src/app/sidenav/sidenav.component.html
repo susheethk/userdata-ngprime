@@ -1,17 +1,19 @@
 <div position="left" class="border-r h-[679px] w-[250px] bg-white fixed top-[66px]">
     <div class="p-3 border-b">
         <ul class="grid gap-1">
+            
             <li>
                 <button 
-                    pButton pRipple 
-                    class="p-button-text w-full text-left left-2 p-1 flex items-center space-x-2 rounded-md group"
-                    [ngClass]="{'bg-[rgb(157,136,109)] text-white': activeButton === 'dashboard',
-                        'hover:bg-[rgb(157,136,109)] hover:text-white': activeButton !== 'dashboard'
-                    }"
-                    (click)="setActiveButton('dashboard')">
-                    <i class="pi pi-microsoft"></i>
-                    <span class="text-sm">Dashboard</span>
-                </button>
+                pButton pRipple 
+                class="p-button-text w-full text-left left-2 p-1 flex items-center space-x-2 rounded-md group"
+                [routerLink]="['/mainpage']"
+                [ngClass]="{'bg-[rgb(157,136,109)] text-white': activeButton === 'dashboard',
+                    'hover:bg-[rgb(157,136,109)] hover:text-white': activeButton !== 'dashboard'
+                }"
+                (click)="setActiveButton('dashboard')">
+                <i class="pi pi-microsoft"></i>
+                <span class="text-sm">Dashboard</span>
+            </button>            
             </li>
             
             <!-- this achived by css -->
@@ -46,6 +48,7 @@
             </li>
             <li>
                 <button pButton pRipple class="p-button-text w-full text-left left-2 p-1 flex items-center space-x-2 rounded-md group"
+                [routerLink]="['/pagethree']"
                 [ngClass]="{'bg-[rgb(157,136,109)] text-white': activeButton === 'leads',
                     'hover:bg-[rgb(157,136,109)] hover:text-white': activeButton !== 'leads'
                 }"
@@ -53,6 +56,8 @@
                     <i class="pi pi-users"></i>
                     <span class="text-sm">Leads</span>
                 </button>
+            
+           
             </li>
         </ul>
     </div>
@@ -70,6 +75,7 @@
             </li>
             <li>
                 <button pButton pRipple class="p-button-text w-full text-left left-2 p-1 flex items-center space-x-2 rounded-md group"
+                [routerLink]="['/pagetwo']"
                 [ngClass]="{'bg-[rgb(157,136,109)] text-white': activeButton === 'task',
                     'hover:bg-[rgb(157,136,109)] hover:text-white': activeButton !== 'task'
                 }"
@@ -77,6 +83,8 @@
                     <i class="pi pi-id-card"></i>
                     <span class="text-sm">Tasks</span>
                 </button>
+          
+          
             </li>
             <li>
                 <button pButton pRipple class="p-button-text w-full text-left left-2 p-1 flex items-center space-x-2 rounded-md group"
