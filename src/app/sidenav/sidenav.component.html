@@ -11,7 +11,7 @@
                     'hover:bg-[rgb(157,136,109)] hover:text-white': activeButton !== 'dashboard'
                 }"
                 (click)="setActiveButton('dashboard')">
-                <i class="pi pi-microsoft"></i>
+                <i class="pi pi-microsoft" [ngClass]="{'text-white':activeButton === 'dashboard', 'text-[rgb(133,133,133)] group-hover:text-white': activeButton !=='dashboard'}" ></i>
                 <span class="text-sm">Dashboard</span>
             </button>            
             </li>
@@ -30,8 +30,9 @@
                     [ngClass]="{'bg-[rgb(157,136,109)] text-white': activeButton === 'enquiries',
                         'hover:bg-[rgb(157,136,109)] hover:text-white': activeButton !== 'enquiries'
                     }"
-                    (click)="setActiveButton('dashboard')">
-                    <i class="pi pi-check-square"></i>
+                    (click)="setActiveButton('enquiries')">
+                    <i class="pi pi-check-square" 
+                     [ngClass]="{'text-white': activeButton === 'enquiries', 'group-hover:text-white text-[rgb(133,133,133)] ': activeButton !== 'enquiries'}"></i>
                     <span class="text-sm">Enquiries</span>
                 </button>
             </li>
@@ -42,7 +43,8 @@
                     'hover:bg-[rgb(157,136,109)] hover:text-white': activeButton !== 'marketing'
                 }"
                 (click)="setActiveButton('marketing')">
-                    <i class="pi pi-shop"></i>
+                    <i class="pi pi-shop"
+                    [ngClass]="{'text-white': activeButton === 'marketing', 'group-hover:text-white text-[rgb(133,133,133)]': activeButton !== 'marketing'}"></i>
                     <span class="text-sm">Marketing</span>
                 </button>
             </li>
@@ -53,7 +55,8 @@
                     'hover:bg-[rgb(157,136,109)] hover:text-white': activeButton !== 'leads'
                 }"
                 (click)="setActiveButton('leads')">
-                    <i class="pi pi-users"></i>
+                    <i class="pi pi-users " 
+                     [ngClass]="{'text-white': activeButton === 'leads', 'group-hover:text-white text-[rgb(133,133,133)]': activeButton !== 'leads'}"></i>
                     <span class="text-sm">Leads</span>
                 </button>
             
@@ -69,7 +72,7 @@
                     'hover:bg-[rgb(157,136,109)] hover:text-white': activeButton !== 'customers'
                 }"
                 (click)="setActiveButton('customers')">
-                    <i class="pi pi-user"></i>
+                    <i class="pi pi-user"  [ngClass]="{'text-white': activeButton === 'customers', 'group-hover:text-white text-[rgb(133,133,133)]': activeButton !== 'customers'}"></i>
                     <span class="text-sm">Customers</span>
                 </button>
             </li>
@@ -80,7 +83,8 @@
                     'hover:bg-[rgb(157,136,109)] hover:text-white': activeButton !== 'task'
                 }"
                 (click)="setActiveButton('task')">
-                    <i class="pi pi-id-card"></i>
+                    <i class="pi pi-id-card" 
+                     [ngClass]="{'text-white': activeButton === 'task', 'group-hover:text-white text-[rgb(133,133,133)]': activeButton !== 'task'}"></i>
                     <span class="text-sm">Tasks</span>
                 </button>
           
@@ -92,7 +96,8 @@
                     'hover:bg-[rgb(157,136,109)] hover:text-white': activeButton !== 'fields'
                 }"
                 (click)="setActiveButton('fields')">
-                    <i class="pi pi-spin pi-cog"></i>
+                    <i class="pi pi-spin pi-cog" 
+                     [ngClass]="{'text-white': activeButton === 'fields', 'group-hover:text-white text-[rgb(133,133,133)]': activeButton !== 'fields'}"></i>
                     <span class="text-sm">Fields Tasks</span>
                 </button>
             </li>
@@ -102,7 +107,8 @@
                     'hover:bg-[rgb(157,136,109)] hover:text-white': activeButton!== 'quotes'
                 }"
                 (click)="setActiveButton('quotes')">
-                    <i class="pi pi-comments"></i>
+                    <i class="pi pi-comments"  
+                    [ngClass]="{'text-white': activeButton === 'quotes', 'group-hover:text-white text-[rgb(133,133,133)]': activeButton !== 'quotes'}"></i>
                     <span class="text-sm">Quotes</span>
                 </button>
             </li>
@@ -112,7 +118,8 @@
                     'hover:bg-[rgb(157,136,109)] hover:text-white': activeButton!== 'inventory'
                 }"
                 (click)="setActiveButton('inventory')">
-                    <i class="pi pi-box"></i>
+                    <i class="pi pi-box" 
+                     [ngClass]="{'text-white': activeButton === 'inventory', 'group-hover:text-white text-[rgb(133,133,133)]': activeButton !== 'inventory'}"></i>
                     <span class="text-sm">Inventory</span>
                 </button>
             </li>
@@ -128,7 +135,8 @@
                     'hover:bg-[rgb(157,136,109)] hover:text-white': activeButton!== 'attendance'
                 }"
                 (click)="setActiveButton('attendance')">
-                    <i class="pi pi-address-book"></i>
+                    <i class="pi pi-address-book" 
+                     [ngClass]="{'text-white': activeButton === 'attendance', 'group-hover:text-white text-[rgb(133,133,133)]': activeButton !== 'attendance'}"></i>
                     <span class="text-sm">Attendance</span>
                 </button>
             </li>
@@ -138,7 +146,8 @@
                     'hover:bg-[rgb(157,136,109)] hover:text-white': activeButton!== 'organization'
                 }"
                 (click)="setActiveButton('organization')">
-                    <i class="pi pi-sitemap"></i>
+                    <i class="pi pi-sitemap" 
+                     [ngClass]="{'text-white': activeButton === 'organization', 'group-hover:text-white text-[rgb(133,133,133)]': activeButton !== 'organization'}"></i>
                     <span class="text-sm">Organization</span>
                 </button>
             </li>
@@ -156,7 +165,8 @@
                     'hover:bg-[rgb(157,136,109)] hover:text-white': activeButton!== 'reports'
                 }"
                 (click)="setActiveButton('reports')">
-                    <i class="pi pi-clipboard"></i>
+                    <i class="pi pi-clipboard" 
+                     [ngClass]="{'text-white': activeButton === 'reports', 'group-hover:text-white text-[rgb(133,133,133)]': activeButton !== 'reports'}"></i>
                     <span class="text-sm">Reports</span>
                 </button>
             </li>
@@ -166,7 +176,8 @@
                     'hover:bg-[rgb(157,136,109)] hover:text-white': activeButton!== 'admin'
                 }"
                 (click)="setActiveButton('admin')">
-                    <i class="pi pi-shield"></i>
+                    <i class="pi pi-shield" 
+                     [ngClass]="{'text-white': activeButton === 'admin', 'group-hover:text-white text-[rgb(133,133,133)]': activeButton !== 'admin'}"></i>
                     <span class="text-sm">Admin</span>
                 </button>
             </li>
