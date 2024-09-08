@@ -35,17 +35,17 @@
         <p-table [value]="products" [paginator]="true" [rows]="10" [rowsPerPageOptions]="[5, 10, 20]">
             <ng-template pTemplate="header">
                 <tr>
-                    <th class="bg-cyan-100 text-[13px] "><p-tableHeaderCheckbox class="border-gray-200 rounded"/></th>
+                    <th class="bg-cyan-100 text-[13px] "><p-tableHeaderCheckbox class="border-gray-200 rounded" /></th>
                     <th class="bg-cyan-100 text-[13px] ">TASK I'd</th>
                     <th class="bg-cyan-100 text-[13px] ">LEAD TYPE</th>
                     <th class="bg-cyan-100 text-[13px] ">SUBJECT</th>
                     <th class="bg-cyan-100 text-[13px] ">DUE DATE</th>
                     <th class="bg-cyan-100 text-[13px] ">
                         <div class="flex items-center">
-                          <p-tableHeaderCheckbox class="mr-2 border-gray-200 rounded" /> 
-                          <span>Follow Up</span>
+                            <p-tableHeaderCheckbox class="mr-2 border-gray-200 rounded" />
+                            <span>Follow Up</span>
                         </div>
-                      </th>               
+                    </th>
                     <th class="bg-cyan-100 h-16 text-[13px] ">STATUS</th>
                 </tr>
             </ng-template>
@@ -58,11 +58,13 @@
                     <td class="text-[13px]">{{product.company}}</td>
                     <td class="text-[13px]">
                         <div class="flex items-center">
-                          <p-tableHeaderCheckbox class="mr-2 border-gray-200 rounded"/>
-                          <span>{{product.email}}</span>
+                            <p-tableHeaderCheckbox class="mr-2 border-gray-200 rounded" />
+                            <span>{{product.email}}</span>
                         </div>
-                      </td>
-                      <td  class="text-[12px] " [ngClass]="{'bg-green-100 text-green-600': product.owner === 'Completed','text-red-600': product.owner === 'Disqualified'}">{{product.owner}}</td>
+                    </td>
+                    <td class="text-[12px] "
+                        [ngClass]="{'bg-green-100 text-green-600': product.owner === 'Completed','text-red-600': product.owner === 'Disqualified'}">
+                        {{product.owner}}</td>
                 </tr>
             </ng-template>
         </p-table>

@@ -1,21 +1,19 @@
 <div position="left" class="border-r h-[679px] w-[250px] bg-white fixed top-[66px]">
     <div class="p-3 border-b">
         <ul class="grid gap-1">
-            
+
             <li>
-                <button 
-                pButton pRipple 
-                class="p-button-text w-full text-left left-2 p-1 flex items-center space-x-2 rounded-md group"
-                [routerLink]="['/mainpage']"
-                [ngClass]="{'bg-[rgb(157,136,109)] text-white': activeButton === 'dashboard',
+                <button pButton pRipple
+                    class="p-button-text w-full text-left left-2 p-1 flex items-center space-x-2 rounded-md group"
+                    [routerLink]="['/mainpage']" [ngClass]="{'bg-[rgb(157,136,109)] text-white': activeButton === 'dashboard',
                     'hover:bg-[rgb(157,136,109)] hover:text-white': activeButton !== 'dashboard'
-                }"
-                (click)="setActiveButton('dashboard')">
-                <i class="pi pi-microsoft" [ngClass]="{'text-white':activeButton === 'dashboard', 'text-[rgb(133,133,133)] group-hover:text-white': activeButton !=='dashboard'}" ></i>
-                <span class="text-sm">Dashboard</span>
-            </button>            
+                }" (click)="setActiveButton('dashboard')">
+                    <i class="pi pi-microsoft"
+                        [ngClass]="{'text-white':activeButton === 'dashboard', 'text-[rgb(133,133,133)] group-hover:text-white': activeButton !=='dashboard'}"></i>
+                    <span class="text-sm">Dashboard</span>
+                </button>
             </li>
-            
+
             <!-- this achived by css -->
             <!-- <li>
                 <button pButton pRipple class="p-button-text w-full text-left left-2 hover:bg-[rgb(157,136,109)] hover:text-white p-1 flex items-center space-x-2 rounded-md group focus:bg-[rgb(157,136,109)] focus:text-white">
@@ -24,102 +22,99 @@
                 </button>
             </li> -->
             <li>
-                <button 
-                    pButton pRipple 
+                <button pButton pRipple
                     class="p-button-text w-full text-left left-2 p-1 flex items-center space-x-2 rounded-md group"
                     [ngClass]="{'bg-[rgb(157,136,109)] text-white': activeButton === 'enquiries',
                         'hover:bg-[rgb(157,136,109)] hover:text-white': activeButton !== 'enquiries'
-                    }"
-                    (click)="setActiveButton('enquiries')">
-                    <i class="pi pi-check-square" 
-                     [ngClass]="{'text-white': activeButton === 'enquiries', 'group-hover:text-white text-[rgb(133,133,133)] ': activeButton !== 'enquiries'}"></i>
+                    }" (click)="setActiveButton('enquiries')">
+                    <i class="pi pi-check-square"
+                        [ngClass]="{'text-white': activeButton === 'enquiries', 'group-hover:text-white text-[rgb(133,133,133)] ': activeButton !== 'enquiries'}"></i>
                     <span class="text-sm">Enquiries</span>
                 </button>
             </li>
 
             <li>
-                <button pButton pRipple class="p-button-text w-full text-left left-2 p-1 flex items-center space-x-2 rounded-md group"
-                [ngClass]="{'bg-[rgb(157,136,109)] text-white': activeButton === 'marketing',
+                <button pButton pRipple
+                    class="p-button-text w-full text-left left-2 p-1 flex items-center space-x-2 rounded-md group"
+                    [ngClass]="{'bg-[rgb(157,136,109)] text-white': activeButton === 'marketing',
                     'hover:bg-[rgb(157,136,109)] hover:text-white': activeButton !== 'marketing'
-                }"
-                (click)="setActiveButton('marketing')">
+                }" (click)="setActiveButton('marketing')">
                     <i class="pi pi-shop"
-                    [ngClass]="{'text-white': activeButton === 'marketing', 'group-hover:text-white text-[rgb(133,133,133)]': activeButton !== 'marketing'}"></i>
+                        [ngClass]="{'text-white': activeButton === 'marketing', 'group-hover:text-white text-[rgb(133,133,133)]': activeButton !== 'marketing'}"></i>
                     <span class="text-sm">Marketing</span>
                 </button>
             </li>
             <li>
-                <button pButton pRipple class="p-button-text w-full text-left left-2 p-1 flex items-center space-x-2 rounded-md group"
-                [routerLink]="['/pagethree']"
-                [ngClass]="{'bg-[rgb(157,136,109)] text-white': activeButton === 'leads',
+                <button pButton pRipple
+                    class="p-button-text w-full text-left left-2 p-1 flex items-center space-x-2 rounded-md group"
+                    [routerLink]="['/pagethree']" [ngClass]="{'bg-[rgb(157,136,109)] text-white': activeButton === 'leads',
                     'hover:bg-[rgb(157,136,109)] hover:text-white': activeButton !== 'leads'
-                }"
-                (click)="setActiveButton('leads')">
-                    <i class="pi pi-users " 
-                     [ngClass]="{'text-white': activeButton === 'leads', 'group-hover:text-white text-[rgb(133,133,133)]': activeButton !== 'leads'}"></i>
+                }" (click)="setActiveButton('leads')">
+                    <i class="pi pi-users "
+                        [ngClass]="{'text-white': activeButton === 'leads', 'group-hover:text-white text-[rgb(133,133,133)]': activeButton !== 'leads'}"></i>
                     <span class="text-sm">Leads</span>
                 </button>
-            
-           
+
+
             </li>
         </ul>
     </div>
     <div class="border-b p-3">
         <ul class="grid gap-1">
             <li>
-                <button pButton pRipple class="p-button-text w-full text-left left-2 p-1 flex items-center space-x-2 rounded-md group"
-                [ngClass]="{'bg-[rgb(157,136,109)] text-white': activeButton === 'customers',
+                <button pButton pRipple
+                    class="p-button-text w-full text-left left-2 p-1 flex items-center space-x-2 rounded-md group"
+                    [ngClass]="{'bg-[rgb(157,136,109)] text-white': activeButton === 'customers',
                     'hover:bg-[rgb(157,136,109)] hover:text-white': activeButton !== 'customers'
-                }"
-                (click)="setActiveButton('customers')">
-                    <i class="pi pi-user"  [ngClass]="{'text-white': activeButton === 'customers', 'group-hover:text-white text-[rgb(133,133,133)]': activeButton !== 'customers'}"></i>
+                }" (click)="setActiveButton('customers')">
+                    <i class="pi pi-user"
+                        [ngClass]="{'text-white': activeButton === 'customers', 'group-hover:text-white text-[rgb(133,133,133)]': activeButton !== 'customers'}"></i>
                     <span class="text-sm">Customers</span>
                 </button>
             </li>
             <li>
-                <button pButton pRipple class="p-button-text w-full text-left left-2 p-1 flex items-center space-x-2 rounded-md group"
-                [routerLink]="['/pagetwo']"
-                [ngClass]="{'bg-[rgb(157,136,109)] text-white': activeButton === 'task',
+                <button pButton pRipple
+                    class="p-button-text w-full text-left left-2 p-1 flex items-center space-x-2 rounded-md group"
+                    [routerLink]="['/pagetwo']" [ngClass]="{'bg-[rgb(157,136,109)] text-white': activeButton === 'task',
                     'hover:bg-[rgb(157,136,109)] hover:text-white': activeButton !== 'task'
-                }"
-                (click)="setActiveButton('task')">
-                    <i class="pi pi-id-card" 
-                     [ngClass]="{'text-white': activeButton === 'task', 'group-hover:text-white text-[rgb(133,133,133)]': activeButton !== 'task'}"></i>
+                }" (click)="setActiveButton('task')">
+                    <i class="pi pi-id-card"
+                        [ngClass]="{'text-white': activeButton === 'task', 'group-hover:text-white text-[rgb(133,133,133)]': activeButton !== 'task'}"></i>
                     <span class="text-sm">Tasks</span>
                 </button>
-          
-          
+
+
             </li>
             <li>
-                <button pButton pRipple class="p-button-text w-full text-left left-2 p-1 flex items-center space-x-2 rounded-md group"
-                [ngClass]="{'bg-[rgb(157,136,109)] text-white': activeButton === 'fields',
+                <button pButton pRipple
+                    class="p-button-text w-full text-left left-2 p-1 flex items-center space-x-2 rounded-md group"
+                    [ngClass]="{'bg-[rgb(157,136,109)] text-white': activeButton === 'fields',
                     'hover:bg-[rgb(157,136,109)] hover:text-white': activeButton !== 'fields'
-                }"
-                (click)="setActiveButton('fields')">
-                    <i class="pi pi-spin pi-cog" 
-                     [ngClass]="{'text-white': activeButton === 'fields', 'group-hover:text-white text-[rgb(133,133,133)]': activeButton !== 'fields'}"></i>
+                }" (click)="setActiveButton('fields')">
+                    <i class="pi pi-spin pi-cog"
+                        [ngClass]="{'text-white': activeButton === 'fields', 'group-hover:text-white text-[rgb(133,133,133)]': activeButton !== 'fields'}"></i>
                     <span class="text-sm">Fields Tasks</span>
                 </button>
             </li>
             <li>
-                <button pButton pRipple class="p-button-text w-full text-left left-2 p-1 flex items-center space-x-2 rounded-md group"
-                [ngClass]="{'bg-[rgb(157,136,109)] text-white': activeButton === 'quotes',
+                <button pButton pRipple
+                    class="p-button-text w-full text-left left-2 p-1 flex items-center space-x-2 rounded-md group"
+                    [ngClass]="{'bg-[rgb(157,136,109)] text-white': activeButton === 'quotes',
                     'hover:bg-[rgb(157,136,109)] hover:text-white': activeButton!== 'quotes'
-                }"
-                (click)="setActiveButton('quotes')">
-                    <i class="pi pi-comments"  
-                    [ngClass]="{'text-white': activeButton === 'quotes', 'group-hover:text-white text-[rgb(133,133,133)]': activeButton !== 'quotes'}"></i>
+                }" (click)="setActiveButton('quotes')">
+                    <i class="pi pi-comments"
+                        [ngClass]="{'text-white': activeButton === 'quotes', 'group-hover:text-white text-[rgb(133,133,133)]': activeButton !== 'quotes'}"></i>
                     <span class="text-sm">Quotes</span>
                 </button>
             </li>
             <li>
-                <button pButton pRipple class="p-button-text w-full text-left left-2 p-1 flex items-center space-x-2 rounded-md group"
-                [ngClass]="{'bg-[rgb(157,136,109)] text-white': activeButton === 'inventory',
+                <button pButton pRipple
+                    class="p-button-text w-full text-left left-2 p-1 flex items-center space-x-2 rounded-md group"
+                    [ngClass]="{'bg-[rgb(157,136,109)] text-white': activeButton === 'inventory',
                     'hover:bg-[rgb(157,136,109)] hover:text-white': activeButton!== 'inventory'
-                }"
-                (click)="setActiveButton('inventory')">
-                    <i class="pi pi-box" 
-                     [ngClass]="{'text-white': activeButton === 'inventory', 'group-hover:text-white text-[rgb(133,133,133)]': activeButton !== 'inventory'}"></i>
+                }" (click)="setActiveButton('inventory')">
+                    <i class="pi pi-box"
+                        [ngClass]="{'text-white': activeButton === 'inventory', 'group-hover:text-white text-[rgb(133,133,133)]': activeButton !== 'inventory'}"></i>
                     <span class="text-sm">Inventory</span>
                 </button>
             </li>
@@ -130,24 +125,24 @@
     <div class="border-b p-3">
         <ul class="grid gap-1">
             <li>
-                <button pButton pRipple class="p-button-text w-full text-left left-2 p-1 flex items-center space-x-2 rounded-md group"
-                [ngClass]="{'bg-[rgb(157,136,109)] text-white': activeButton === 'attendance',
+                <button pButton pRipple
+                    class="p-button-text w-full text-left left-2 p-1 flex items-center space-x-2 rounded-md group"
+                    [ngClass]="{'bg-[rgb(157,136,109)] text-white': activeButton === 'attendance',
                     'hover:bg-[rgb(157,136,109)] hover:text-white': activeButton!== 'attendance'
-                }"
-                (click)="setActiveButton('attendance')">
-                    <i class="pi pi-address-book" 
-                     [ngClass]="{'text-white': activeButton === 'attendance', 'group-hover:text-white text-[rgb(133,133,133)]': activeButton !== 'attendance'}"></i>
+                }" (click)="setActiveButton('attendance')">
+                    <i class="pi pi-address-book"
+                        [ngClass]="{'text-white': activeButton === 'attendance', 'group-hover:text-white text-[rgb(133,133,133)]': activeButton !== 'attendance'}"></i>
                     <span class="text-sm">Attendance</span>
                 </button>
             </li>
             <li>
-                <button pButton pRipple class="p-button-text w-full text-left left-2 p-1 flex items-center space-x-2 rounded-md group"
-                [ngClass]="{'bg-[rgb(157,136,109)] text-white': activeButton === 'organization',
+                <button pButton pRipple
+                    class="p-button-text w-full text-left left-2 p-1 flex items-center space-x-2 rounded-md group"
+                    [ngClass]="{'bg-[rgb(157,136,109)] text-white': activeButton === 'organization',
                     'hover:bg-[rgb(157,136,109)] hover:text-white': activeButton!== 'organization'
-                }"
-                (click)="setActiveButton('organization')">
-                    <i class="pi pi-sitemap" 
-                     [ngClass]="{'text-white': activeButton === 'organization', 'group-hover:text-white text-[rgb(133,133,133)]': activeButton !== 'organization'}"></i>
+                }" (click)="setActiveButton('organization')">
+                    <i class="pi pi-sitemap"
+                        [ngClass]="{'text-white': activeButton === 'organization', 'group-hover:text-white text-[rgb(133,133,133)]': activeButton !== 'organization'}"></i>
                     <span class="text-sm">Organization</span>
                 </button>
             </li>
@@ -156,28 +151,28 @@
 
     </div>
 
-    
+
     <div class=" p-3">
         <ul class="grid gap-1">
             <li>
-                <button pButton pRipple class="p-button-text w-full text-left left-2 p-1 flex items-center space-x-2 rounded-md group"
-                [ngClass]="{'bg-[rgb(157,136,109)] text-white': activeButton === 'reports',
+                <button pButton pRipple
+                    class="p-button-text w-full text-left left-2 p-1 flex items-center space-x-2 rounded-md group"
+                    [ngClass]="{'bg-[rgb(157,136,109)] text-white': activeButton === 'reports',
                     'hover:bg-[rgb(157,136,109)] hover:text-white': activeButton!== 'reports'
-                }"
-                (click)="setActiveButton('reports')">
-                    <i class="pi pi-clipboard" 
-                     [ngClass]="{'text-white': activeButton === 'reports', 'group-hover:text-white text-[rgb(133,133,133)]': activeButton !== 'reports'}"></i>
+                }" (click)="setActiveButton('reports')">
+                    <i class="pi pi-clipboard"
+                        [ngClass]="{'text-white': activeButton === 'reports', 'group-hover:text-white text-[rgb(133,133,133)]': activeButton !== 'reports'}"></i>
                     <span class="text-sm">Reports</span>
                 </button>
             </li>
             <li>
-                <button pButton pRipple class="p-button-text w-full text-left left-2 p-1 flex items-center space-x-2 rounded-md group"
-                [ngClass]="{'bg-[rgb(157,136,109)] text-white': activeButton === 'admin',
+                <button pButton pRipple
+                    class="p-button-text w-full text-left left-2 p-1 flex items-center space-x-2 rounded-md group"
+                    [ngClass]="{'bg-[rgb(157,136,109)] text-white': activeButton === 'admin',
                     'hover:bg-[rgb(157,136,109)] hover:text-white': activeButton!== 'admin'
-                }"
-                (click)="setActiveButton('admin')">
-                    <i class="pi pi-shield" 
-                     [ngClass]="{'text-white': activeButton === 'admin', 'group-hover:text-white text-[rgb(133,133,133)]': activeButton !== 'admin'}"></i>
+                }" (click)="setActiveButton('admin')">
+                    <i class="pi pi-shield"
+                        [ngClass]="{'text-white': activeButton === 'admin', 'group-hover:text-white text-[rgb(133,133,133)]': activeButton !== 'admin'}"></i>
                     <span class="text-sm">Admin</span>
                 </button>
             </li>

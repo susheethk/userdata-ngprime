@@ -78,7 +78,7 @@
     <div class="bg-white h-64 absolute top-16 left-0 my-2 rounded-md "
       style="width: 515px; box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);">
 
-      <p-chart type="bar" [data]="taskStatusData" [options]="chartOptions" width="500px" height="250px"></p-chart>
+      <p-chart type="bar" [data]="barChartData" [options]="barChartOptions" width="500px" height="250px"></p-chart>
     </div>
 
 
@@ -98,7 +98,7 @@
 
     <div class="bg-white h-64 absolute top-16 left-0 my-2 rounded-md "
       style="width: 515px; height: 255px; box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);">
-      <p-chart type="doughnut" [data]="statisticsData" [options]="chartOptions" width="500px" height="250px"></p-chart>
+      <p-chart type="doughnut" [data]="doughnutChartData" [options]="doughnutChartOptions" width="500px" height="250px"></p-chart>
     </div>
 
   </div>
